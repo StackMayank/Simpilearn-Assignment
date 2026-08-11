@@ -13,7 +13,7 @@ export function FooterBrand({
   content,
   className = "",
   logoObjectClassName = "object-contain object-left",
-  copyrightClassName = "whitespace-pre-line text-sm leading-5 text-silver",
+  copyrightClassName = "whitespace-pre-line text-sm leading-5 ",
 }: FooterBrandProps) {
   return (
     <div className={className}>
@@ -28,7 +28,7 @@ export function FooterBrand({
       </div>
       <div className={copyrightClassName}>
         {content.copyright.includes("\n") ? (
-          content.copyright.split("\n").map((line) => <p key={line}>{line}</p>)
+          content.copyright.split("\n").map((line) => <p className="text-[#B5B5B5]" key={line}>{line}</p>)
         ) : (
           <p>{content.copyright}</p>
         )}

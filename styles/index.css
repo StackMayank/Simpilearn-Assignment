@@ -2,7 +2,8 @@
 
 /*
   Design tokens + shared utilities for the Nexcent landing page.
-  Content band: --container-max 1024px. Desktop layout aligns with Tailwind lg (1024px).
+  Content band: --container-max 1024px (laptop/desktop under xl).
+  At xl (≥1280px): --container-max 1152px. Desktop layout aligns with Tailwind lg (1024px).
 */
 @theme {
   --color-primary: #4caf4f;
@@ -67,6 +68,13 @@
 @media (min-width: 1024px) and (max-width: 1055px) {
   :root {
     --container-gutter: 1rem;
+  }
+}
+
+/* Bigger screens only: modest widen. Under 1280px stays 1024px. */
+@media (min-width: 1280px) {
+  :root {
+    --container-max: 1100px;
   }
 }
 

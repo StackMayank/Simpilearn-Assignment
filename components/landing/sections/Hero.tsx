@@ -15,12 +15,12 @@ export function Hero({ content }: HeroProps) {
       <Container className="flex min-h-0 flex-1 flex-col">
         <div className="flex flex-1 flex-col-reverse items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-[clamp(1.5rem,4vw,6.5rem)]">
           <div className="w-full max-w-[657px] text-center lg:shrink-0 lg:text-left">
-            <h1 className="text-[2rem] font-semibold leading-10 text-heading lg:text-[64px] lg:leading-[76px]">
+            <h1 className="text-[2rem] font-semibold leading-10 text-heading lg:text-[58px] xl:text-[64px] lg:leading-[76px]">
               {content.title}
               <br />
               <span className="text-primary">{content.titleHighlight}</span>
             </h1>
-            {/* Figma 5:828 — 16/24, 16px below title */}
+            
             <p className="mx-auto mt-4 max-w-[657px] text-base leading-6 text-muted lg:mx-0">
               {content.description}
             </p>

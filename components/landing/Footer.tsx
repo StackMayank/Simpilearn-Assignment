@@ -8,10 +8,6 @@ type FooterProps = {
   content: FooterContent;
 };
 
-/**
- * Figma Footer / Big / 4 scaled to 1024 band.
- * Brand 311 | Company auto | Support auto | Newsletter 255 — equal gutters.
- */
 export function Footer({ content }: FooterProps) {
   return (
     <footer className="bg-secondary text-secondary-foreground">
@@ -32,7 +28,7 @@ export function Footer({ content }: FooterProps) {
 
           <FooterLinkColumns
             columns={content.columns}
-            className="contents"
+            className="contents text-"
             columnClassName="flex flex-col items-center gap-6 sm:items-start"
           />
 

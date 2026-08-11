@@ -24,7 +24,7 @@ export function FooterLinkColumns({
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="rounded-[var(--radius-sm)] transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
+                  className="rounded-[var(--radius-sm)] transition-colors text-[#B5B5B5] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
                 >
                   {link.label}
                 </Link>

@@ -7,8 +7,8 @@ type ContainerProps = {
 };
 
 /**
- * Shared 1024px content band with equal side gutters (`.page-container`).
- * Used by header, footer, and every landing section.
+ * Shared content band with equal side gutters (`.page-container`).
+ * Caps at 1024px under xl; 1280px at xl and up. Used by header, footer, and every landing section.
  */
 export function Container({
   children,

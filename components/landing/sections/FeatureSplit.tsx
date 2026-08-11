@@ -38,8 +38,8 @@ export function FeatureSplit({
 
   const copy = (
     <div className="flex min-w-0 w-full flex-1 flex-col justify-center text-center lg:text-left">
-      <h2 className="text-heading-section">{content.title}</h2>
-      <p className="mt-4 text-sm leading-6 text-muted lg:text-[14px] lg:leading-5">
+      <h2 className="text-heading-section lg:w-[550px] xl:w-[600px]">{content.title}</h2>
+      <p className="mt-4 text-sm leading-6 text-muted lg:text-[14px] lg:leading-5 lg:w-[550px] xl:w-[600px]">
         {content.description}
       </p>
       <div className="mt-8 flex justify-center lg:justify-start">
@@ -57,7 +57,7 @@ export function FeatureSplit({
   return (
     <section
       id={id}
-      className="py-6 lg:mb-[var(--gap-body)] lg:py-0"
+      className="py-8 lg:mb-[var(--gap-body)] lg:py-8"
     >
       <Container>
         <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-10 xl:gap-12">
