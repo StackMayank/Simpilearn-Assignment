@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/*
+  Design tokens + shared utilities for the Nexcent landing page.
+  Content band: --container-max 1024px. Desktop layout aligns with Tailwind lg (1024px).
+*/
+@theme {
+  --color-primary: #4caf4f;
+  --color-primary-hover: #388e3b;
+  --color-primary-foreground: #ffffff;
+  --color-primary-soft: #e8f5e9;
+
+  --color-background: #ffffff;
+  --color-foreground: #4d4d4d;
+  --color-heading: #4d4d4d;
+  --color-muted: #717171;
+  --color-silver: #f5f7fa;
+  --color-border: #e8e8e8;
+  --color-hero-dot-inactive: #c8e6c9;
+  --color-placeholder: #d9dbe1;
+
+  --color-secondary: #263238;
+  --color-secondary-foreground: #f5f7fa;
+  --color-secondary-muted: #89939e;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  --shadow-card: 0 2px 2px 0 rgb(171 190 209 / 0.2);
+  --shadow-blog: 0 8px 16px 0 rgb(171 190 209 / 0.4);
+}
+
+:root {
+  --container-max: 1024px;
+  --container-gutter: clamp(1rem, 4vw, 1.5rem);
+
+  --gap-hero-clients: 2.5rem;
+  --gap-section: 2.5rem;
+  --gap-community-unlock: 2.5rem;
+  --gap-body: 2.5rem;
+  --gap-blog-cta: 3rem;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-gutter: 0px;
+
+    --gap-hero-clients: 36px;
+    --gap-section: 53px;
+    --gap-community-unlock: 60px;
+    --gap-body: 40px;
+    --gap-blog-cta: 72px;
+
+    --h-hero: 599px;
+    --h-achievements: 260px;
+    --h-testimonial: 390px;
+    --h-blog: 460px;
+    --h-cta: 300px;
+    --h-footer: 328px;
+  }
+}
+
+/* Keep a small gutter when the 1024 band would otherwise touch the viewport edge */
+@media (min-width: 1024px) and (max-width: 1055px) {
+  :root {
+    --container-gutter: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+@utility text-heading-section {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+@utility text-body-muted {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--color-muted);
+}
+
+@utility page-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+}
+
+@utility hero-section {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-silver);
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+@utility hero-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .text-heading-section {
+    font-size: 1.875rem;
+  }
+
+  .text-body-muted {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-heading-section {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-section {
+    box-sizing: border-box;
+    height: var(--h-hero);
+    min-height: var(--h-hero);
+    padding-top: 64px;
+    padding-bottom: 24px;
+    margin-bottom: var(--gap-hero-clients);
+  }
+
+  .hero-dots {
+    margin-top: 40px;
+  }
+}
